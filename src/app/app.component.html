@@ -12,11 +12,11 @@
   <div id="demo2" *ngIf="showRecepieForm">
     <form name="Receipe" action="">
       <div>
-        <h4>recipe-name</h4>
+        <label for="recipe-name">recipe-name</label>
       </div>
       <input type="text" name="recipe-name" [(ngModel)]="recipeName">
       <div>
-        <h4>recipe-instruction</h4>
+        <label for="recipe-instructions">recipe-instructions</label>
       </div>
       <input type="text" name="recipe-instructions" [(ngModel)]="recipeInstructions" >
       <br><br>
@@ -27,7 +27,8 @@
 
   <div id="demo3" *ngIf="showFinalRecipe" >
     <h2>My Receipe</h2>
-    <p>{{recipeName}} --> {{recipeInstructions}}</p>
+    <ul><li>{{recipeName}} --> {{recipeInstructions}}</li></ul>
+    
   </div>
 
 </div>
