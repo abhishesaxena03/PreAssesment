@@ -3,9 +3,9 @@
   <form name="Receipe" action="">
   <div id="demo1" *ngIf="showReceipeDashboard">
 
-    <h2>My Recipes</h2>
+    <h2 role="heading">My Recipes</h2>
     <!-- ^ Do not remove this element ^ -->
-    <div><button (click)="receipeClicked()">Add Recipe</button></div>
+    <div><button (click)="receipeClicked()" role="button" name="Add Recipe">Add Recipe</button></div>
     <h4>There are no recipes to list</h4>
   </div>
 
@@ -15,21 +15,21 @@
       <div>
         <label for="recipe-name">recipe-name</label>
       </div>
-      <input type="textbox" name="recipe-name" [(ngModel)]="recipeName">
+      <input type="textbox" role="textbox" name="recipe-name" [(ngModel)]="recipeName">
       <div>
         <label for="recipe-instructions">recipe-instructions</label>
       </div>
-      <input type="textbox" name="recipe-instructions" [(ngModel)]="recipeInstructions" >
+      <input type="textbox" role="textbox" name="recipe-instructions" [(ngModel)]="recipeInstructions" >
       <br><br>
-      <div><input type="submit" value="submit" (click)="submit()" ></div>
+      <div><input type="submit" role="button" value="submit" (click)="submit()" ></div>
 
-   
+    
   </div>
 
   <div id="demo3" *ngIf="showFinalRecipe" >
     <h2>My Receipe</h2>
-    <ul><li>{{recipeName}} --> {{recipeInstructions}}</li></ul>
+    <ul><li role="listitem">{{recipeName}} --> {{recipeInstructions}}</li></ul>
     
   </div>
- </form>
+</form>
 </div>
