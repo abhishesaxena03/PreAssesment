@@ -1,6 +1,6 @@
 
 <div>
-  <form name="Receipe" action="">
+  
   <div id="demo1" *ngIf="showReceipeDashboard">
 
     <h2 role="heading">My Recipes</h2>
@@ -11,7 +11,7 @@
 
 
   <div id="demo2" *ngIf="showRecepieForm">
-    
+    <form name="Receipe" action=""> 
       <div>
         <label for="recipe-name">recipe-name</label>
       </div>
@@ -21,8 +21,8 @@
       </div>
       <input type="textbox" role="textbox" name="recipe-instructions" [(ngModel)]="recipeInstructions" >
       <br><br>
-      <div><input type="submit" role="button" value="submit" (click)="submit()" ></div>
-
+      <div><button type="submit"  (click)="submit()" >Add Recipe</button></div>
+    </form>
     
   </div>
 
@@ -31,5 +31,5 @@
     <ul><li role="listitem">{{recipeName}} --> {{recipeInstructions}}</li></ul>
     
   </div>
-</form>
+
 </div>
