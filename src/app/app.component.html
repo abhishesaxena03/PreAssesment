@@ -12,6 +12,7 @@
 
   <div id="demo2" *ngIf="showRecepieForm">
     <form name="Receipe" action=""> 
+      <button>Add Recipe</button>
       <div>
         <label for="recipe-name">recipe-name</label>
       </div>
@@ -21,7 +22,7 @@
       </div>
       <input type="textbox" role="textbox" name="recipe-instructions" [(ngModel)]="recipeInstructions" >
       <br><br>
-      <div><button type="submit"  (click)="submit()" >Add Recipe</button></div>
+      
     </form>
     
   </div>
